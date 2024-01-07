@@ -35,38 +35,30 @@ limitations under the License.
 
 > Constructor for creating arrays filled with pseudorandom values drawn from a nullary PRNG.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-array-tools-nullary
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-Random = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var Random = require( 'path/to/vendor/umd/random-array-tools-nullary/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.Random;
-})();
-</script>
+var Random = require( '@stdlib/random-array-tools-nullary' );
 ```
 
 #### Random( prng, dtypes, dtype )
@@ -172,19 +164,12 @@ The method has the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var exponential = require( '@stdlib/random-base-exponential' );
+var dtypes = require( '@stdlib/array-dtypes' );
+var Random = require( '@stdlib/random-array-tools-nullary' );
 
-var dt = dtypes( 'real_floating_point' );
-dt.push( 'generic' );
-
+var dt = dtypes( 'real_floating_point_and_generic' );
 var random = new Random( exponential.factory( 2.0 ), dt, 'float64' );
 
 var x = random.generate( 10 );
@@ -199,11 +184,6 @@ x = random.generate( 10, {
     'dtype': 'generic'
 });
 // returns [...]
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
