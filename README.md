@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@deno/mod.js';
+import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@v0.1.0-deno/mod.js';
 ```
 
 #### Random( prng, dtypes, dtype )
@@ -151,7 +151,7 @@ The method has the following parameters:
 ```javascript
 import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@deno/mod.js';
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@deno/mod.js';
-import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@deno/mod.js';
+import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@v0.1.0-deno/mod.js';
 
 var dt = dtypes( 'real_floating_point_and_generic' );
 var random = new Random( exponential.factory( 2.0 ), dt, 'float64' );
