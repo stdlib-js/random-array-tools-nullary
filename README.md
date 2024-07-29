@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-array-tools-nullary/tags). For example,
+
+```javascript
 import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@v0.2.2-deno/mod.js';
 ```
 
@@ -151,7 +156,7 @@ The method has the following parameters:
 ```javascript
 import exponential from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-exponential@deno/mod.js';
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@deno/mod.js';
-import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@v0.2.2-deno/mod.js';
+import Random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-tools-nullary@deno/mod.js';
 
 var dt = dtypes( 'real_floating_point_and_generic' );
 var random = new Random( exponential.factory( 2.0 ), dt, 'float64' );
